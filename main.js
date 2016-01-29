@@ -38,8 +38,8 @@ cloud().size([900, 900])
 
 function draw(words) {
 	d3.select("body").append("svg")
-/*    .attr("width", 900)
-    .attr("height", 900)*/
+    .attr("width", 900)
+    .attr("height", 900)
   .append("g")
     .attr("transform", "translate(150,150)")
   .selectAll("text")
