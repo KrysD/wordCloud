@@ -1,0 +1,21 @@
+{
+  "name": "wordcloudtest",
+  "version": "1.0.0",
+  "description": "Testing wordcloud",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify main.js -o browserify-bundle.js -d -v",
+    "watch": "watchify main.js -o browserify-bundle.js -d -v"
+  },
+  "author": "KrysD",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "d3": "^3.5.14",
+    "d3.layout.cloud": "^1.2.0"
+  },
+  "devDependencies": {
+    "watchify": "^3.7.0"
+  }
+}
