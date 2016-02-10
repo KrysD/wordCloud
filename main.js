@@ -26,22 +26,26 @@ var wordCloudName = filteredName.map(function(element){
 	return element.sexe === 'F' ? 'pink' : '#9CAEEA' ;
 });*/
 
+var width = window.innerWidth; // gets the width of your browser window
+var height = window.innerHeight; // gets the height of your browser window
+
 var fill = d3.scale.category20();
 
-cloud().size([900, 900])
+var layout = cloud().size([width, height]) // your layout (.i.e the svg) will have your window size
   .words(wordCloudName)
   .rotate(function() { return ~~(Math.random() * 2) * 90; })
   .font("Impact")
   .fontSize(function(d) { return d.size/4; })
-  .on("end", draw)
-	.start();
+  .on("end", draw);
+
+layout.start();
 
 function draw(words) {
 	d3.select("body").append("svg")
-    .attr("width", 900)
-    .attr("height", 900)
+    .attr("class", "cloud")
   .append("g")
-    .attr("transform", "translate(150,150)")
+  // This sets the cloud at the center of your svg
+    .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")") // checkout the 'browserify.js' example from d3.layout.cloud library
   .selectAll("text")
     .data(words)
   .enter().append("text")
