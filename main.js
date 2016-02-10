@@ -2,7 +2,7 @@
 
 var d3 = global.d3 = require('d3');
 var cloud = require('d3.layout.cloud');
-var data = require('./data/liste_des_prenoms_2004_a_2012.json');
+var data = require('https://drive.google.com/open?id=0BzHrbblt5jRwa1d3N0sxYmQwc2M');
 
 var yearSet = new Set();
 
