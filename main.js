@@ -2,7 +2,7 @@
 
 var d3 = global.d3 = require('d3');
 var cloud = require('d3.layout.cloud');
-var data = require('https://drive.google.com/file/d/0BzHrbblt5jRwa1d3N0sxYmQwc2M/view?usp=sharing');
+var data = require('https://docs.google.com/uc?authuser=0&id=0BzHrbblt5jRwa1d3N0sxYmQwc2M&export=download');
 
 var yearSet = new Set();
 
